@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -24,28 +23,11 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className={inter.className}>
-        <header className="mx-3 z-50 fixed left-0 right-0 flex justify-between border-t-2 border-blue-200 dark:border-orange-300 cursor-default bg-white bg-gradient-to-br from-gray-100 via-gray-100 to-gray-200 shadow-md py-3 px-6 h-20 dark:bg-gray-800 dark:from-gray-800 dark:via-gray-900 dark:to-black dark:shadow-lg rounded-b-3xl">
-          <Image
-            className="relative "
-            src="/logo-testo.png"
-            alt="Next.js Logo"
-            width={90}
-            height={30}
-            priority
-          />
-          <div>
-            <div className={`m-2 mr-4 p-2 h-10 float-left rounded-lg bg-gray-100 shadow-md dark:bg-gray-800`}>
-              <p className="text-dark text-sm pt-1 dark:text-white">
-                Lun/Dom 7-23
-              </p>
-            </div>
-            <div className={`m-2 ml-0 p-2 h-10 float-left rounded-lg ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
-              <p className="text-white font-semibold text-md">
-                {isOpen ? 'Aperto' : 'Chiuso'} Ora
-              </p>
-            </div>
-          </div>
-        </header>
+        <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
+          <p className="text-white font-semibold text-md">
+            {isOpen ? 'Aperto' : 'Chiuso'} Ora
+          </p>
+        </div>
         {children}
       </body>
     </html>

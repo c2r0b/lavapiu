@@ -1,15 +1,7 @@
 'use client'
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Confetti from 'react-confetti'
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
+import useWindowSize from '@/hooks/useWindowSize';
 
 function drawBubble(this:any, context:any) {
   // remove animation
@@ -45,28 +37,22 @@ function drawBubble(this:any, context:any) {
 }
 
 export default function Home() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  const size = useWindowSize();
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
   return (
     <>
-      <Confetti
-        width={windowDimensions.width}
-        height={windowDimensions.height}
-        confettiSource={{x: windowDimensions.width / 2 - 30, y: 280, w: 30, h: 30}}
-        friction={1}
-        gravity={0.02}
-        numberOfPieces={2}
-        colors={[]}
-        drawShape={drawBubble}
-      />
+      { size.width ? (
+        <Confetti
+          width={size.width}
+          height={size.height}
+          confettiSource={{x: (size.width ?? 0) / 2 - 30, y: 280, w: 30, h: 30}}
+          friction={1}
+          gravity={0.02}
+          numberOfPieces={3}
+          colors={[]}
+          drawShape={drawBubble}
+        />
+      ) : null }
       <main className="flex min-h-screen flex-col items-center justify-between pt-16 w-full">
         <div className="relative flex flex-col place-items-center before:absolute before:h-[300px] before:w-[380px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-sky-300 before:to-sky-200 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[640px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-400 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
           <Image

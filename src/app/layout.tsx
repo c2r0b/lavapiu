@@ -36,10 +36,10 @@ export default function RootLayout({
           <div>
             <div className={`m-2 mr-4 p-2 h-10 float-left rounded-lg bg-gray-100 shadow-md dark:bg-gray-800`}>
               <p className="text-dark text-sm pt-1 dark:text-white">
-                Lun/Dom 7.00 - 23.00
+                Lun/Dom 7-23
               </p>
             </div>
-            <div className={`m-2 p-2 h-10 float-left rounded-lg ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
+            <div className={`m-2 ml-0 p-2 h-10 float-left rounded-lg ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
               <p className="text-white font-semibold text-md">
                 {isOpen ? 'Aperto' : 'Chiuso'} Ora
               </p>

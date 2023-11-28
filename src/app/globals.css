@@ -17,8 +17,7 @@
 }
 
 body {
-  width:100%;
-  overflow-x: hidden;
+  box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,6 +25,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .bubble{
@@ -136,8 +139,8 @@ body {
 
 @media only screen and (max-width:800px) {
   .bubble{
-      width: 235px;
-      height: 235px;
+      width: 95%;
+      height: auto;
   }
 }
 @media only screen and (max-width:600px) {

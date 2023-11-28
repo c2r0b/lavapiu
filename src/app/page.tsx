@@ -43,7 +43,7 @@ export default function Home() {
     <>
       { size.width ? (
         <Confetti
-          width={size.width}
+          width={size.width - 50}
           height={size.height}
           confettiSource={{x: (size.width ?? 0) / 2 - 30, y: 280, w: 30, h: 30}}
           friction={1}
@@ -53,8 +53,8 @@ export default function Home() {
           drawShape={drawBubble}
         />
       ) : null }
-      <main className="flex min-h-screen flex-col items-center justify-between pt-16 w-full">
-        <div className="relative flex flex-col place-items-center before:absolute before:h-[300px] before:w-[380px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-sky-300 before:to-sky-200 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[640px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-400 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <main className="w-full flex min-h-screen flex-col items-center justify-between pt-16">
+        <div className="flex flex-col place-items-center before:absolute before:h-[300px] before:w-[380px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-sky-300 before:to-sky-200 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[140px] lg:after:w-[640px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-400 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
           <Image
             className="relative "
             src="/logo-testo.png"
@@ -131,7 +131,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div id="priceList" className="mt-16 px-8 lg:px-32 py-32 w-full grid text-center bg-white dark:bg-gray-800">
+        <div id="priceList" className="mt-16 w-full px-8 lg:px-32 py-32 grid text-center bg-white dark:bg-gray-800">
           <h1 className="text-3xl font-bold mb-10">
             Listino prezzi
           </h1>

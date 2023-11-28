@@ -24,6 +24,6 @@ export default () => {
 
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-    
+
     return windowSize;
 }

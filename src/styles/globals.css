@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-color: 110, 191, 238, 0.8;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 110, 191, 238, 0.6;
+  --background-end-rgb: 110, 191, 238, 0.8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: 110, 191, 238;
+    --foreground-rgb: 255, 255, 255;
+    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 110, 191, 238;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@keyframes slide{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+.bubble{
+  width: 250px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+              25px 35px 20px rgba(0,0,0,0.05),
+              25px 20px 20px rgba(0, 0, 0, 0.05),
+              inset 25px 30px 30px rgba(255,255,255,0.9);
+  animation: slide 1s linear;
+
+  &#one{
+    border-radius: 67% 33% 28% 72% / 59% 52% 58% 41% ;
+    margin: 0 0 30px 0;
+  }
+
+  &#two{
+    border-radius: 45% 60% 18% 52% / 59% 52% 48% 41% ;
+    margin: 0 0 30px 0;
+  }
+
+  &#three{
+    border-radius: 27% 50% 28% 72% / 59% 52% 48% 41% ;
+    margin: 0 30px 30px 0;
+  }
+
+  &#four{
+    border-radius: 15% 55% 53% 47% / 55% 41% 59% 45%  ;
+    margin: 0 0 30px 0;
+  }
+
+  &:hover {
+    /* white gradient bg */
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      );
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffffc8;
+    top: 40px;
+    right: 30px;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffffc8;
+    top: 30px;
+    right: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  & .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    z-index: 10;
+
+    & h2{
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: var(--clr);
+    }
+
+    & a{
+      position: relative;
+      padding: 10px 20px;
+      background-color: var(--clr);
+      border-radius: 20px;
+      color: #fff;
+      text-shadow: 2px 5px 5px rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.5s;
+      box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+                  inset -2px -5px 10px rgba(255,255,255,0.1),
+                  10px 10px 5px rgba(0,0,0,0.05),
+                  10px 10px 5px rgba(0,0,0,0.25);
+      
+      &:hover{
+        background-color: #fff;
+        color: var(--clr);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .bubble{
+      width: 100%;
+      height: auto;
+      background-color: rgb(var(--theme-color));
+      box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+                  5px 5px 10px rgba(0,0,0,0.05),
+                  5px 5px 10px rgba(0, 0, 0, 0.05),
+                  inset 25px 30px 30px rgba(255,255,255,0.9);
+
+      &#one, &#two, &#three, &#four {
+        border-radius: 20px 5px 10px 5px;
+        margin: 0 0 20px 0;
+      }
+
+      & .content {
+        padding: 15px;
+
+        & p {
+          display: none;
+        }
+        
+        & h2 {
+          color: black;
+          font-size: 1.2em;
+        }
+      }
+
+      &::before {
+        top: 10px;
+        right: 20px;
+      }
+  }
+}
+@media only screen and (max-width:600px) {
+  .bubble{
+      flex-direction: column;
+  }
+}

@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import { useTranslations } from 'next-intl';
 import {notFound} from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
@@ -24,6 +25,8 @@ export default function RootLayout({
     locale
   }
 }: RootLayoutProps) {
+  const t = useTranslations('status');
+
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
@@ -38,7 +41,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
           <p className="text-white font-semibold text-md">
-            {isOpen ? 'Aperto' : 'Chiuso'} Ora
+            { t(isOpen ? 'open' : 'close') }
           </p>
         </div>
         {children}

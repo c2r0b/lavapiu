@@ -3,6 +3,10 @@
         "title": "LavaPiù Livorno",
         "description": "LavaPiù è la tua scelta ideale per lavanderia self-service a [City Name], aperta tutti i giorni dalle 7:00 alle 23:00. Goditi l'efficienza e l'affidabilità delle nostre macchine Miele Professional. Pulizia impeccabile e rispetto per l'ambiente in un ambiente confortevole e accogliente. Visita LavaPiù per un'esperienza di lavaggio superiore!"
     },
+    "status": {
+        "open": "Aperto",
+        "closed": "Chiuso"
+    },
     "info": {
         "title": "Da Gennaio 2024",
         "address": "Via Bat Yam 6, Livorno"

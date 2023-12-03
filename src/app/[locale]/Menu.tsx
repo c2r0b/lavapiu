@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { MenuContainer } from '@/ui/MenuContainer'
 import { MenuItem } from '@/ui/MenuItem'
 
-export const Menu = () => {
+const Menu = () => {
     const t = useTranslations('nav');
     return (
         <MenuContainer>
@@ -25,3 +25,5 @@ export const Menu = () => {
         </MenuContainer>
     )
 }
+
+export default Menu

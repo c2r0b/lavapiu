@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import useBubbles from '@/hooks/useBubbles'
 
-export const Logo = () => {
+const Logo = () => {
     const bubbles = useBubbles()
   
     return (
@@ -29,3 +29,5 @@ export const Logo = () => {
         </>
     )
 }
+
+export default Logo

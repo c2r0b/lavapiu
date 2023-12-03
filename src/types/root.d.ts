@@ -4,3 +4,7 @@ export interface RootLayoutProps {
       locale: string
     }
 }
+
+export type MetadataParams = {
+    params: RootLayoutProps["params"]
+}

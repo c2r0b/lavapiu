@@ -8,3 +8,5 @@ Thumbs.db
 .next
 node_modules
 package-lock.json
+
+public/*.js*

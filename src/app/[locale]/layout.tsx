@@ -1,17 +1,21 @@
+import '@/styles/globals.css'
 import {notFound} from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import '@/styles/globals.css'
-
-import type { Metadata } from 'next'
-import type { RootLayoutProps } from '@/types/root'
+import {getTranslations} from 'next-intl/server';
 import { locales } from '@/i18n/config'
+
+import type { RootLayoutProps, MetadataParams } from '@/types/root'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: "LavaPiù Livorno",
-  description: "LavaPiù è la tua scelta ideale per lavanderia self-service a [City Name], aperta tutti i giorni dalle 7:00 alle 23:00. Goditi l'efficienza e l'affidabilità delle nostre macchine Miele Professional. Pulizia impeccabile e rispetto per l'ambiente in un ambiente confortevole e accogliente. Visita LavaPiù per un'esperienza di lavaggio superiore!",
+export async function generateMetadata({ params: { locale } }: MetadataParams) {
+  const t = await getTranslations({locale, namespace: 'metadata'});
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
 }
 
 export default function RootLayout({

@@ -8,8 +8,5 @@ See the final result here: [lavapiulivorno.it](https://lavapiulivorno.it)
 - [x] Responsive
 - [x] Dark mode
 - [x] Multilanguage
-- [ ] PWA
-- [ ] Live chat
+- [x] PWA
 - [ ] Machine status
-- [ ] SEO
-- [ ] CMS

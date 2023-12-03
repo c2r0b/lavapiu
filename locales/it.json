@@ -1,0 +1,20 @@
+{
+    "nav": {
+        "prices": {
+            "title": "Prezzi",
+            "description": "Prezzi competitivi e macchine di qualità"
+        },
+        "gallery": {
+            "title": "Galleria",
+            "description": "Le nostre macchine Miele Professional"
+        },
+        "location": {
+            "title": "Dove siamo",
+            "description": "A Livorno, Ardenza. Parcheggio gratuito"
+        },
+        "contact": {
+            "title": "Chiamaci",
+            "description": "Puoi contattarci a questo numero: 0586 1234567"
+        }
+    }
+}

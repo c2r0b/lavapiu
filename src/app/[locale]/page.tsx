@@ -1,5 +1,3 @@
-'use client'
-import useBubbles from '@/hooks/useBubbles';
 import { Main } from '@/ui/Main';
 import { Logo } from './Logo';
 import { Menu } from './Menu';
@@ -8,11 +6,8 @@ import { PriceList } from './PriceList';
 import { Footer } from '@/ui/Footer';
 
 export default function Home() {
-  const bubbles = useBubbles();
-
   return (
     <>
-      { bubbles }
       <Main>
         <Logo />
 

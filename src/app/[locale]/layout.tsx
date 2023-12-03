@@ -1,7 +1,11 @@
-import type { Metadata } from 'next'
+import {notFound} from 'next/navigation'
 import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
+
+import type { Metadata } from 'next'
+import type { RootLayoutProps } from '@/types/root'
+import { locales } from '@/i18n/config'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,9 +16,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+  params: {
+    locale
+  }
+}: RootLayoutProps) {
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
   // Get the current time, to set isOpen only from 7 to 23 from January 2024
   const now = new Date();
   const hours = now.getHours();
@@ -22,7 +30,7 @@ export default function RootLayout({
   const isOpen = hours >= 7 && hours < 23 && year >= 2024;
 
   return (
-    <html lang="it">
+    <html lang={locale}>
       <body className={inter.className}>
         <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
           <p className="text-white font-semibold text-md">

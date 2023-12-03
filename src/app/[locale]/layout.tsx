@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-500' : 'bg-red-500'} shadow-md`}>
+        <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-600' : 'bg-red-700'} shadow-md`}>
           <p className="text-white font-semibold text-md">
             { t(isOpen ? 'open' : 'close') }
           </p>

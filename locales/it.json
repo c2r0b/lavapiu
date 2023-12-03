@@ -5,7 +5,7 @@
     },
     "status": {
         "open": "Aperto",
-        "closed": "Chiuso"
+        "close": "Chiuso"
     },
     "info": {
         "title": "Da Gennaio 2024",

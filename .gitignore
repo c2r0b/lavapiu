@@ -9,4 +9,5 @@ Thumbs.db
 node_modules
 package-lock.json
 
-public/*.js*
+public/*.js
+public/*.js.*

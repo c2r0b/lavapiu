@@ -38,6 +38,9 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={inter.className}>
         <div className={`fixed left-0 z-50 right-0 ml-0 p-2 h-10 float-left text-center ${isOpen ? 'bg-green-600' : 'bg-red-700'} shadow-md`}>
           <p className="text-white font-semibold text-md">

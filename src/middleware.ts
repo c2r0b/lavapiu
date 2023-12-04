@@ -10,13 +10,6 @@ export function middleware(request:any) {
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:;
     style-src 'self' 'nonce-${nonce}' 'unsafe-hashes';
-    font-src 'self' http: https:;
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    block-all-mixed-content;
-    upgrade-insecure-requests;
 `
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = cspHeader

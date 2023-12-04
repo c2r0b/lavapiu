@@ -10,7 +10,6 @@ export function middleware(request:any) {
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:;
     style-src 'self' 'nonce-${nonce}' 'unsafe-hashes';
-    img-src 'self' blob: data: http: https:;
     font-src 'self' http: https:;
     object-src 'none';
     base-uri 'self';

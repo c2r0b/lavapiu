@@ -12,7 +12,7 @@ const Logo = () => {
                 <Image
                     className="relative "
                     src="/logo-testo.png"
-                    alt="Next.js Logo"
+                    alt="LavaPiù Logo"
                     width={220}
                     height={50}
                     priority
@@ -20,7 +20,7 @@ const Logo = () => {
                 <Image
                     className="relative mt-2"
                     src="/logo-small-transparent.png"
-                    alt="Next.js Logo"
+                    alt="LavaPiù Logo"
                     width={180}
                     height={37}
                     priority

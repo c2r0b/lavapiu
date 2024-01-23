@@ -18,7 +18,7 @@ const Menu = () => {
                 <h2>{t('location.title')}</h2>
                 <p>{t('location.description')}</p>
             </MenuItem>
-            <MenuItem id="four" href="tel:+3905861234567">
+            <MenuItem id="four" href="tel:+393201506351">
                 <h2>{t('contact.title')}</h2>
                 <p>{t('contact.description')}</p>
             </MenuItem>

@@ -18,7 +18,7 @@ export default function Home() {
         <PriceList />
         
         <Footer>
-          © LavaPiù Livorno - P.IVA 1234567890
+          © LavaPiù Livorno
         </Footer>
       </Main>
     </>

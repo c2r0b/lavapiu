@@ -9,4 +9,3 @@ See the final result here: [lavapiulivorno.it](https://lavapiulivorno.it)
 - [x] Dark mode
 - [x] Multilanguage
 - [x] PWA
-- [ ] Machine status

@@ -31,6 +31,11 @@ const PriceList = () => {
                     </tr>
                     <tr>
                         <td className="p-3 border border-gray-200 dark:border-neutral-700">{t('wash')}</td>
+                        <td className="p-3 border border-gray-200 dark:border-neutral-700">€ 6,00</td>
+                        <td className="p-3 border border-gray-200 dark:border-neutral-700">7.5kg</td>
+                    </tr>
+                    <tr>
+                        <td className="p-3 border border-gray-200 dark:border-neutral-700">{t('wash')}</td>
                         <td className="p-3 border border-gray-200 dark:border-neutral-700">€ 8,00</td>
                         <td className="p-3 border border-gray-200 dark:border-neutral-700">15kg</td>
                     </tr>

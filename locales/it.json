@@ -1,46 +1,47 @@
 {
-    "metadata": {
-        "title": "LavaPiù Livorno",
-        "description": "LavaPiù è la tua scelta ideale per lavanderia self-service a [City Name], aperta tutti i giorni dalle 7:00 alle 23:00. Goditi l'efficienza e l'affidabilità delle nostre macchine Miele Professional. Pulizia impeccabile e rispetto per l'ambiente in un ambiente confortevole e accogliente. Visita LavaPiù per un'esperienza di lavaggio superiore!"
-    },
-    "status": {
-        "open": "Aperto",
-        "close": "Chiuso"
-    },
-    "info": {
-        "title": "Da Gennaio 2024",
-        "address": "Via Bat Yam 6, Livorno"
-    },
-    "nav": {
-        "prices": {
-            "title": "Prezzi",
-            "description": "Prezzi competitivi e macchine di qualità"
-        },
-        "gallery": {
-            "title": "Galleria",
-            "description": "Le nostre macchine Miele Professional"
-        },
-        "location": {
-            "title": "Dove siamo",
-            "description": "A Livorno, Ardenza. Parcheggio gratuito"
-        },
-        "contact": {
-            "title": "Chiamaci",
-            "description": "Puoi contattarci a questo numero: 320 150 6351"
-        }
+  "metadata": {
+    "title": "LavaPiù Livorno",
+    "description": "LavaPiù è la tua scelta ideale per lavanderia self-service a [City Name], aperta tutti i giorni dalle 7:00 alle 23:00. Goditi l'efficienza e l'affidabilità delle nostre macchine Miele Professional. Pulizia impeccabile e rispetto per l'ambiente in un ambiente confortevole e accogliente. Visita LavaPiù per un'esperienza di lavaggio superiore!"
+  },
+  "status": {
+    "open": "Aperto",
+    "close": "Chiuso"
+  },
+  "info": {
+    "title": "Tutti i giorni dalle 7:00 alle 23:00",
+    "address": "Via Bat Yam 6, Livorno"
+  },
+  "nav": {
+    "prices": {
+      "title": "Prezzi",
+      "description": "Prezzi competitivi e macchine di qualità"
     },
     "gallery": {
-        "title": "Galleria"
+      "title": "Galleria",
+      "description": "Le nostre macchine Miele Professional"
     },
-    "priceList": {
-        "title": "Listino prezzi",
-        "service": "Servizio",
-        "price": "Prezzo",
-        "load": "Carico",
-        "wash": "Lavaggio",
-        "dry": "Asciugatura",
-        "petWash": "Lavaggio Pet",
-        "petDry": "Asciugatura Pet",
-        "discount": "Sconto del 10% su tutti i prodotti per pagamento con chiavetta ricaricabile"
+    "location": {
+      "title": "Dove siamo",
+      "description": "A Livorno, Ardenza. Parcheggio gratuito"
+    },
+    "contact": {
+      "title": "Chiamaci",
+      "description": "Puoi contattarci a questo numero: 320 150 6351"
     }
+  },
+  "gallery": {
+    "title": "Galleria"
+  },
+  "priceList": {
+    "title": "Listino prezzi",
+    "service": "Servizio",
+    "price": "Prezzo",
+    "load": "Carico",
+    "wash": "Lavaggio",
+    "dry": "Asciugatura",
+    "petWash": "Lavaggio Pet",
+    "petDry": "Asciugatura Pet",
+    "discount": "Sconto del 10% su tutti i prodotti per pagamento con chiavetta ricaricabile",
+    "happyHour": "Happy Hour: tutti i giorni dalle 20:00 alle 23:00, sconto di 1€ su tutti i servizi"
+  }
 }
